@@ -1,0 +1,71 @@
+<DOCTYPE html>
+<html lang="PT-BR">
+	<head>
+		<title>SGEA - Registro de doações</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<img src="img\etec01.png" alt="ETEC" class="img_principal">		
+	</head>
+
+	<body>
+
+		<nav>
+			
+		</nav>
+		<!-- conteudo principal !-->
+		<main>
+			<h1 class="titulo_tela"><i>Registro de Doações<i></h1>
+
+			<br>
+			<div class="container droppedHover">
+				<form name="formulario" action="salvar_registro_doacao.php" method="POST">
+					<nav class="menu_">
+						<p><a href="carregaLogout.php">HOME</a></p>
+						<p><a class="submenu" href="menu_adm.html">MENU</a></p>
+					</nav>
+					<div class="campos_princ">
+					
+						<div class="campos_pri">
+							<p> CPF do participante
+							<input type="text" name="cpf" class="form-control" placeholder="" required="" autofocus="" contenteditable="false">
+						</div>
+
+						<br>
+						<div class="campos_pri">
+							<p> Material doado
+							<input type="text" class="form-control" name="material" placeholder="" required="" autofocus="" contenteditable="false" spellcheck="true">
+								<a href="lista_doacoes.php">
+									<button type="button" class="btn btn-primary" id="botao_search">
+                                		<span class="glyphicon glyphicon-search"></span>
+                            		</button>
+                            	</a></p>
+						</div>
+
+						<div class="campos_qua">
+					    	<p> Valor
+					    	<input type="text" name="valor" class="form-control" placeholder="" required="" autofocus="" contenteditable="false"></p>
+						</div>
+
+						
+						<div class="botao">
+							<button class="btn btn-lg btn-primary btn-block" type="submit">Registrar</button>
+						</div>
+
+					</div>
+
+				</form>
+			</div>
+
+		</main>
+		
+		<!-- rodapé !-->
+		<footer>
+			
+		</footer>
+
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+
+	</body>
+</html>

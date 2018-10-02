@@ -1,0 +1,188 @@
+<DOCTYPE html>
+<html lang="PT-BR">
+	<head>
+		<title>Cadastro Atividade - SGEA Sistema Gerenciamento de Eventos Acadêmicos</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<img src="img\etec01.png" alt="ETEC" class="img_principal">
+		<script type="text/javascript">
+			function validaform(){
+
+				var tamanho_nome = document.forms["formulario"].nomeAtiv.value.length;
+				if(tamanho_nome < 3 || tamanho_nome > 64 ){
+					alert("O campo nome da atividade deve ter entre 3 e 64 caracteres.");					
+					return false;
+				}
+		
+				var qtdMin = document.forms["formulario"].qtdMin.value;
+				if(isNaN(qtdMin)){
+					alert("O campo Quantidade Mínima precisa ser preenchido corretamente!");
+					return false;
+				}
+
+				var qtdMax = document.forms["formulario"].qtdMax.value;
+				if(isNaN(qtdMax)){
+					alert("O campo Quantidade Máxima precisa ser preenchido corretamente!");
+					return false;
+				}
+
+				var limite = document.forms["formulario"].limite.value;
+				if(isNaN(limite)){
+					alert("O campo Limite precisa ser preenchido corretamente!");
+					return false;
+				}
+
+				var pontos = document.forms["formulario"].pontos.value;
+				if(isNaN(pontos)){
+					alert("O campo Pontos precisa ser preenchido corretamente!");
+					return false;
+				}
+
+				var curso = document.forms["formulario"].curso.selectIndex;
+				if(curso == 0){
+					alert("Escolha um curso!");
+					return false;
+				}else if(curso == 1){
+					curso = 'tecnico';
+				}else if(curso == 2){
+					curso = 'medio';
+				}else{
+					curso = 'todos';
+				}
+
+				var sexo = document.forms["formulario"].sexo.selectIndex;
+				if(sexo == 0){
+					sexo = 'T';
+				}else if(sexo == 1){
+					sexo = 'M';
+				}else{
+					sexo = 'F';
+				}
+
+				var grupo = document.forms["formulario"].grupo.value;
+				var inRifa = document.forms["formulario"].inRifa.value;
+				var valorRifa = document.forms["formulario"].valorRifa.value;
+				
+				var descricao = document.forms["formulario"].descricao.value.length;
+				if(descricao < 5){
+					alert("O campo descricao precisa ser preenchido corretamente!");
+					return false;
+				}
+
+				document.forms["formulario"].submit();
+			}
+		</script>		
+	</head>
+
+	<body>
+	
+		<div class="container droppedHover">
+				<nav class="menu_">
+					<p><a href="menu_adm.html">MENU / </a></p>				
+				</nav>
+
+		<nav>
+			
+		</nav>
+		<!-- conteudo principal !-->
+		<main>
+			<h1 class="titulo_tela"><i>Cadastro de Atividades<i></h1>
+
+			<br>
+			<div class="container droppedHover">
+				<form name="formulario" action="cadastraAtiv.php" method="POST">
+					
+					<div class="campos_princ">
+						<div class="campos_pri">
+							<p> Nome Atividade
+							<input type="text" class="form-control" name="nomeAtiv" placeholder="" required="" autofocus="" contenteditable="false" spellcheck="true">
+								<a href="atividade_registrada.php">
+									<button type="button" class="btn btn-primary" id="botao_search">
+                                		<span class="glyphicon glyphicon-search"></span>
+                            		</button>
+                            	</a></p>
+						</div>
+						<br><br>
+						<div class="campos_sec">
+							<p> Quantidade Minima
+							<input type="text" name="qtdMin" class="form-control" id="text-input-qt_min" placeholder="" required="" autofocus="" contenteditable="false" spellcheck="true"></p>
+						</div>
+
+						<div class="campos_terc">
+							<p> Quantidade Maxima
+					    	<input type="text" name="qtdMax" class="form-control" id="text-input-qt_max" placeholder="" required="" autofocus="" contenteditable="false" spellcheck="true"></p>
+					    </div>
+
+					    <div class="campos_terc">
+							<p> Limite de participação
+					    	<input type="text" name="limite" class="form-control" id="text-input-limite" placeholder="" required="" autofocus="" contenteditable="false" spellcheck="true"></p>
+					    </div>
+
+					    <div class="campos_sec">
+					    	<p> Pontos
+					    	<input type="text" name="pontos" class="form-control" placeholder="" required="" autofocus="" contenteditable="false" spellcheck="true"></p>
+						</div>
+
+						<div class="campos_terc">
+					    	<p> Escolha do curso
+					    	<select name="curso" class="form-control">
+        						<option value="">        Escolha... </option>
+        						<option value="tecnico"> Tecnico    </option>
+        						<option value="Médio">     Médio    </option>
+        						<option value="Todos">     Todos    </option>
+        					</select></p>
+						</div>
+
+						<div class="campos_terc">
+					    	<p> Sexo
+					    	<select name="sexo" class="form-control">
+        						<option value="T">     Misto  </option>
+        						<option value="M"> Masculino  </option>
+        						<option value="F">  Feminino  </option>
+        					</select></p>
+						</div>
+
+						<br><br>
+						<div class="form-signin campos_qua">
+							<label> <input type="checkbox" name="grupo" value="S">Atividade em  Grupo?</label>
+						</div>
+
+						<br>
+						<div>
+							<p> Descrição da regra da atividade
+        						<textarea name="descricao" rows="5" cols="50" maxlength="3000" class="form-control" placeholder="" required="" contenteditable="false"></textarea>
+        					</p>
+						</div>
+
+						<div class="form-signin">
+							<label> <input name="inRifa" type="checkbox" id="check-box-rifa" />Rifa?</label>
+						</div>
+
+						<div class="campos_qua">
+							<p> Valor da rifa
+					    		<input type="text" name="valorRifa" class="form-control" id="text-input-rifa" placeholder="" contenteditable="false" disabled="false">
+					    	</p>
+						</div>
+
+						<div class="botao">
+							<button class="btn btn-lg btn-primary btn-block" type="submit" onClick="validaform();">Incluir</button>
+						</div>
+
+					</div>
+
+				</form>
+			</div>
+
+		</main>
+		
+		<!-- rodapé !-->
+		<footer>
+			
+		</footer>
+
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+
+	</body>
+</html>

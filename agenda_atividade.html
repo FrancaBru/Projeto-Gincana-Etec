@@ -1,0 +1,76 @@
+<DOCTYPE html>
+<html lang="PT-BR">
+	<head>
+		<title>Agenda das Atividades - SGEA Sistema Gerenciamento de Eventos Acadêmicos</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/hover.css" media="all">
+		<img src="img\etec01.png" alt="ETEC" class="img_principal">
+		
+	</head>
+
+	<body>
+
+	<div class="container droppedHover">
+				<form class="form-signin" role="form" method="post" action="cadastro_atividade.html">
+					<nav class="menu_">
+						<p><a href="menu_adm.html" class="submenu"> MENU</a></p>
+						<!-- LINK PARA LOGOUT DA PAGINA-->
+						
+					</nav>
+	
+		<nav>
+			
+		</nav>
+		<!-- conteudo principal !-->
+		<main>
+			
+			<h1 class="titulo_tela"><i>Agenda das Atividades<i></h1>
+			
+
+			<br>
+			<div class="container droppedHover">
+				<form class="form-signin" role="form" name="opc" method="post" action="recebe_agenda.php">
+					<div class="campos_princ">
+						<div class="campos_pri">
+							<p> Nome da Atividade
+							<input type="text" name="nm_atividade" class="form-control">
+							<a href="lista_atividade_agendamento.php">
+								<button type="button" class="btn btn-primary" id="botao_search">
+                                	<span class="glyphicon glyphicon-search"></span>
+                            	</button>
+                            </a></p>
+						</div>						
+
+						<div class="campos_sec">
+							<p> Escolha uma data
+							<input type="date" name="data" class="form-control"></p>
+						</div>
+
+						<div class="form-signin campos_terc">
+							<p> Horario inicial
+							<input type="time" name="hrIncial" class="form-control"></p>
+						</div>
+
+						<div class="form-signin campos_qui">
+							<p> Horario final
+							<input type="time" name="hrFinal" class="form-control"></p>
+						</div>
+
+					</div>
+				</form>
+			</div>
+
+		</main>
+		
+		<!-- rodapé !-->
+		<footer>
+			
+		</footer>
+
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<DOCTYPE html>
+<html lang="PT-BR">
+	<head>
+		<title>Login - SGEA Sistema Gerenciamento de Eventos Acadêmicos</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/hover.css" media="all">
+		<img src="img\etec01.png" alt="ETEC" class="img_principal">		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+	    <div class="container droppedHover">
+				
+				
+		<!-- conteudo principal !-->
+		<main>
+			<h1 class="titulo_tela"><i>Acesse sua área exclusiva<i></h1>
+
+			<br>
+			<div class="container droppedHover">
+				<form class="form-signin" role="form" metohd="post" action="autentica.php">
+					<nav class="menu_">
+						<p><a href="index.html">HOME</a></p>
+					</nav>
+					
+					<div class="campos_princ">
+						<h4 class="form-signin-heading" contenteditable="false">Login</h4>
+
+						<div class="campos_qua" id="campos_login">
+							<p> <input type="text" class="form-control"  name="cpf" placeholder="Informe seu CPF" required="" autofocus="" contenteditable="false" /></p>
+						</div>
+
+						<div class="campos_qua" id="campos_login">
+							<p> <input type="password" class="form-control" placeholder="Informe sua Senha" required="" autofocus="" contenteditable="false" /></p>
+					    </div>
+
+					    <br>
+						
+            			
+						<br><br>
+						<div id="botao_login">
+							<button class="btn btn-lg btn-primary btn-block" type="submit">Acessar</button>
+						</div>
+					</div>
+
+				</form>
+			</div>
+		</main>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="js/script.js"></script>
+
+	</body>
+</html>

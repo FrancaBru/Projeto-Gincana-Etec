@@ -1,0 +1,320 @@
+.img_principal{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+    z-index: -1;
+}
+
+.titulo_tela{
+	position: absolute;
+	margin-top: 3%;
+	margin-left: 50%;
+	font-size: 25;
+	text-decoration: underline;
+}
+
+.titulo_home{
+	margin-left: 5%;
+	font-family: Impact;
+	color: blue;
+}
+
+.subtitulo_home{
+	margin-top: 0;
+	margin-left: 10px;
+}
+
+.campos_princ{
+	width: 40%;
+	position: absolute;
+	margin-top: 6%;
+	margin-left: 43%;
+}
+
+.campos_pri{
+	width: 95%;
+	float: left;
+}
+
+.campos_pri select{
+	width: 91%;
+}
+
+.campos_pri input{
+    width: 91%;
+}
+
+.campos_sec{
+	width: 31.2%;
+	position: static;
+	float: left;	
+}
+
+.campos_terc{
+	width: 31.2%;
+	position: static;
+	margin-left: 3%;
+	float: left;
+}
+
+.campos_qua{
+	width: 31.2%;
+	position: static;
+}
+
+.campos_qui{
+    width: 31.2%;
+    position: static;
+    margin-left: 3%;
+    float: left;
+    margin-bottom: 15%;
+}
+
+.botao{
+	width: 31.2%;
+	margin-left: 3%;
+	float: right;
+}
+
+.sessao{
+	margin-top: 33%;
+}
+
+.artigo-principal{
+	width: 70%;
+	float: left;
+}
+
+#campos_login{
+	width: 250px;
+}
+
+#botao_login{
+	width: 31.2%;
+	margin-left: 3%;
+}
+
+.botao {
+    margin: 0 0 0 0;
+    width: 23%;
+    height: 10%;
+    margin-left: 1.5%;
+    text-align: center;
+    font-size: 30px;
+}
+
+#botao_search{
+	width: 8.5%;
+	float: right;
+	z-index: 2;
+	margin-top: -5.99%;
+}
+
+.botao_search{
+    width: 8.5%;
+    float: right;
+    z-index: 2;
+    margin-top: -5.99%;   
+}
+
+.table_font{
+    font-size: 12px;
+}
+
+.table_font_{
+    font-size: 10px;
+}
+
+.table_hora{
+	font-size: 11px;
+}
+
+.table_hora b{
+	font-size: 12px;
+}
+/* ------- inicio - CSS para a tela Menu ADM ---------- */
+.titulo_menu_adm{
+	margin-top: 3%;
+	margin-left: 8.5%;
+}
+
+.menu{
+	margin: 50px 0 0 120px;
+}
+
+.submenu{
+	text-align: right;
+	float: right;
+	margin-right: 10%;
+	list-style-type: none;
+}
+
+.img_menu{
+	width: 20px;
+	height: 20px;
+}
+
+.botao_menu{
+	border-style: none;
+	width: 150px;
+	height: 150px;
+}
+
+.linha{
+	margin-top: 0;
+	margin-bottom: 1%;
+}
+
+.titulo_table{
+    margin-left: 5%;
+}
+
+.menu_table p{
+    font-size: 65%;
+    float: right;
+}
+
+.menu_ p{
+    font-size: 65%;
+    float: right;
+    margin-top: 5%;
+}
+
+.deixarOculto{
+    display: none;
+    width: 3%;
+}
+/* ------- fim    - CSS para a teça Menu ADM ---------- */
+
+/* ------- CSS para o Slider ---------- */
+#imgs img 
+{
+    /*overlays all the imgs */
+    /*You see only the first img, for now*/
+    width:100%;
+    height:60%;
+    position:absolute;
+    top:8%;
+    left:0;
+    align-content: center;
+    transition: 1s;
+    visibility:hidden;
+    /*we want to show only 1 img at the time*/
+}
+/*the container */
+#Snav 
+{
+    display:block;
+    width:100%;
+    height:65%;
+    position:absolute;
+    top:0;
+    left:0;
+    margin-top: 5%;
+}
+/* where the circles are going to be*/
+#SnavUp 
+{
+    display:block;
+    width:100%;
+    height:10%;
+}
+#Scircles 
+{
+    display:block;
+    width:5%;
+    height:10%;
+    margin-right:5%;
+    float:right;        /* is going to be on the right side of the slider*/
+}
+#Scircles ul 
+{
+    margin:0;
+    float:right;
+    display:block;
+    width:100%;
+    height:100%;
+}
+#Scircles li
+{
+    /*we don't need the dots*/
+    list-style:none;
+    display:block;
+    background-color:rgba(0, 0, 0, 1);
+    width:25%;
+    height:90%;
+    margin-left:5%;
+    float:left;     /*on the same line*/
+    visibility:hidden;
+    /*we need circles, not squares*/
+    border-bottom-left-radius:25px;
+    border-top-left-radius:25px;
+    border-bottom-right-radius:25px;
+    border-top-right-radius:25px;
+}
+/*ok , we are done with the SnavUp*/
+#SnavMiddle 
+{
+    display:block;
+    width:100%;
+    height:10%;
+    margin-top:10%;     /*this is up to you , where you want the buttons*/
+}
+/*left button*/
+#Sleft 
+{
+    width:8%;
+    height:100%;
+    float:left;
+    margin-left:3%;
+    opacity:0.8;
+}
+/*button effect*/
+#Sleft:hover 
+{
+    opacity:0.8;
+}
+#Sright 
+{
+    width:8%;
+    height:100%;
+    float:right;
+    margin-right:3%;
+    opacity:0.8;
+}
+#Sright:hover 
+{
+    opacity:0.8;
+}
+/*now we have to add the info at the bottom of the slider*/
+#SnavBottom 
+{
+    display:block;
+    background-color:rgba(0, 0, 0, 0.8);
+    width:100%;
+    height:10%;
+    position:absolute;
+    bottom:11%;
+    left:0;
+}
+#SnavBottom p 
+{
+    font:normal 200% Arial;
+    color:#fff;
+    position:absolute;      
+    bottom:0;
+    left:0;
+    margin-left:3%;
+    visibility:hidden;
+}
+
+.login{
+    margin-left: 85%;   
+
+}
+
+.login p{
+    font: times new roman;
+    height: 15px;
+}
+/* ----- Fim do CSS para o Slider ----- */
